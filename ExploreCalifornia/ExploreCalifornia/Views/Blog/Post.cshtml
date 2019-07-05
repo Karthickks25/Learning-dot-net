@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model ExploreCalifornia.Models.Post
+@{
+    Layout = "_Layout";
+}
+
+ @await Html.PartialAsync("_post")
+
+@*<article class="blog-post">
+    <h1>@ViewBag.Title</h1>
+    <div class="details">
+        Posted <span>@ViewBag.Posted</span> by <span> @ViewBag.Author</span>
+    </div>
+    <div class="content">
+        @ViewBag.Body
+    </div>
+</article>*@

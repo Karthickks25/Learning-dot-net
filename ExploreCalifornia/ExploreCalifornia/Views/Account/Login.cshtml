@@ -1,0 +1,47 @@
+﻿@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@model ExploreCalifornia.Models.Account.LoginViewModel
+@{
+    Layout = "_Layout";
+}
+
+<h1>Login</h1>
+
+<fieldset class="account">
+    <form role="form" asp-action="Login" asp-controller="Account">
+
+        <div asp-validation-summary="All" class="input-validation-error"></div>
+
+        <div class="form-group">
+            <label asp-for="EmailAddress"></label>
+            <input asp-for="EmailAddress" class="form-control" placeholder="Enter your email address" />
+            <span asp-validation-for="EmailAddress"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input type="password" asp-for="Password" class="form-control" placeholder="Enter your password" />
+            <span asp-validation-for="Password" class="field-validation-error"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="ConfirmPassword"></label>
+            <input type="password" asp-for="ConfirmPassword" class="form-control" placeholder="Re-enter your password to confirm" />
+            <span asp-validation-for="ConfirmPassword" class="field-validation-error"></span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="RememberMe"></label>
+            <input type="checkbox" asp-for="RememberMe" class="form-control" />
+            <span asp-validation-for="RememberMe" class="field-validation-error"></span>
+        </div>
+        <br />
+        <div>
+            <label>&nbsp;</label>
+            <button type="submit">Login</button>
+        </div>
+        <br />
+        <div>
+            Not Registered? <span> <a href="@Url.Action("Register", "Account")">Create a New account</a></span>
+        </div>
+    </form>
+</fieldset>

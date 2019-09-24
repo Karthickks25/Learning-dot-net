@@ -46,8 +46,16 @@ namespace PracticeConsole
 
         class C : B
         {
+            //read only applies only on Fields
+            //Can be defined on declaration and in constructor
+            readonly int readOnlyC  = 100;
+
+            //can only be defined on declaration and nonchangeable.
+            const double constC = 3.14;
+
             public C()
             {
+                readOnlyC = 140;
                 Console.WriteLine("From Class C Constructor");
             }
 
@@ -56,8 +64,9 @@ namespace PracticeConsole
                 Console.WriteLine("From Class C Static Constructor");
             }
 
-            public override void M1()
+            public new void M1()
             {
+                Console.WriteLine(readOnlyC);
                 var b = 20;
                 dynamic a = 10;
                 Console.WriteLine($"{a}, {b}");
@@ -73,7 +82,7 @@ namespace PracticeConsole
 
         public static void MainCall()
         {
-            A a = new C();
+            A a = new B();
             a.M1();
         }
     }

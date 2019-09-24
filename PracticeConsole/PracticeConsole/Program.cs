@@ -8,19 +8,23 @@ namespace PracticeConsole
 {
     class Program
     {
-        //static void Main(string[] args)
-        //{
-        //    //Inheritance_Calling_test.MainCall();
+        static void Main(string[] args)
+        {
+            //Inheritance_Calling_test.MainCall();
 
-        //    //StringOccurance.Maincall();
+            //StringOccurance.Maincall();
 
-        //    //StaticConstructorTest.MainCall();
+            //StaticConstructorTest.MainCall();
 
-        //    //Sorting.MainCall();
+            //Sorting.MainCall();
 
-        //    //MakeTwoArraysEqualBySwap.MainCall(); 
-            
-        //    Console.ReadKey();
-        //}
+            //MakeTwoArraysEqualBySwap.MainCall(); 
+
+            //SealedClassExample.MainCall();
+
+            FindAndRemoveConsecutiveCharacter.Maincall();
+
+            Console.ReadKey();
+        }
     }
 }
